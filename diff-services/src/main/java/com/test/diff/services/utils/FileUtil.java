@@ -1,7 +1,6 @@
 package com.test.diff.services.utils;
 
-import com.test.diff.services.consts.FileConst;
-import com.test.diff.services.entity.ProjectInfo;
+import com.test.diff.services.consts.FileConst; 
 import com.test.diff.services.exceptions.FileException;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.io.FileUtils;
@@ -85,25 +84,9 @@ public class FileUtil {
         }
         return addPath(FileConst.DIFF_ROOT_PATH, group, env, projectName, branch);
     }
+ 
 
-    public String getRepoPath(ProjectInfo projectInfo, String branch){
-        return getRepoPath(projectInfo.getProjectGroup(), projectInfo.getEnv(),
-                projectInfo.getProjectName(),
-                branch);
-    }
-
-    /**
-     * 返回指定commit id绝对路径
-     * @param projectInfo
-     * @param branch
-     * @param commit
-     * @return
-     */
-    public String getRepoCommitPath(ProjectInfo projectInfo, String branch, String commit){
-        String path = getRepoPath(projectInfo, branch);
-        path = path + "_" + commit;
-        return path;
-    }
+    
 
     /**
      * 根据关键字获取单个指定class文件绝对路径

@@ -1,8 +1,7 @@
 package com.test.diff.services.internal;
 
 
-import com.test.diff.services.consts.GitConst;
-import com.test.diff.services.entity.ProjectInfo;
+import com.test.diff.services.consts.GitConst; 
 import com.test.diff.services.entity.RepoInfo;
 import com.test.diff.services.enums.StatusCode;
 import com.test.diff.services.exceptions.FileException;
@@ -217,10 +216,6 @@ public class GitRepository extends BaseRepository {
             throw new GitException(StatusCode.GIT_PARSER_TREE_ERROR);
         }
     }
-
-    public Collection<Ref> branchList(ProjectInfo projectInfo) {
-        return refsList(projectInfo.getProjectUrl());
-    }
-
+ 
 
 }

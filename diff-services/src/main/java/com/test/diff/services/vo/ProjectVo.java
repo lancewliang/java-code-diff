@@ -1,6 +1,5 @@
 package com.test.diff.services.vo;
-
-import com.test.diff.services.entity.CoverageApp;
+ 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -16,11 +15,7 @@ import java.util.List;
 @NoArgsConstructor
 public class ProjectVo {
 
-    /**
-     * 应用列表
-     */
-    private List<CoverageApp> apps;
-
+ 
     /**
      * 项目id
      */

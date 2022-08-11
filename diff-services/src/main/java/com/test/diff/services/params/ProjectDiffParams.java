@@ -26,7 +26,7 @@ public class ProjectDiffParams extends BaseParams{
      * @see DiffTypeEnum
      */
     @NotNull(message = "diff类型不能为空")
-    private Integer diffTypeCode;
+    private DiffTypeEnum diffTypeCode;
 
     /**
      * 是否需要比较前先更新代码
@@ -42,5 +42,12 @@ public class ProjectDiffParams extends BaseParams{
      * 目标commitId
      */
     private String newCommitId;
+    
+    private String projectName;
+
+    private String projectGroup;
+    private String env;
+	String projectUrl = null;
+	Long repoId = null;
 
 }

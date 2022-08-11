@@ -1,81 +1,82 @@
 package com.test.diff.services.entity;
-
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableField;
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableName;
+ 
 import java.io.Serializable;
 import java.util.Date;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
 import lombok.Data;
 
 /**
  * 
  * @TableName diff_repo_info
  */
-@TableName(value ="diff_repo_info")
+@Entity
 @Data
 public class RepoInfo implements Serializable {
     /**
      * 自增id
      */
-    @TableId(value = "id", type = IdType.AUTO)
+   @Id
     private Long id;
 
     /**
      * 仓库名
      */
-    @TableField(value = "depot_name")
+   @Column
     private String depotName;
 
     /**
      * 仓库类型：0:SVN, 1:GIT
      */
-    @TableField(value = "depot_type")
+   @Column
     private Integer depotType;
 
     /**
      * 仓库地址：例127.0.0.1:888
      */
-    @TableField(value = "depot_url")
+   @Column
     private String depotUrl;
 
     /**
      * 登录账号
      */
-    @TableField(value = "user_name")
+   @Column
     private String userName;
 
     /**
      * 登录密码
      */
-    @TableField(value = "passwd")
+   @Column
     private String passwd;
 
     /**
      * 是否启用
      */
-    @TableField(value = "is_disable")
+   @Column
     private Boolean isDisable;
 
     /**
      * 是否删除
      */
-    @TableField(value = "is_delete")
+   @Column
     private Boolean isDelete;
 
     /**
      * 创建时间
      */
-    @TableField(value = "add_time")
+   @Column
     private Date addTime;
 
     /**
      * 最后修改时间
      */
-    @TableField(value = "last_time")
+   @Column
     private Date lastTime;
 
-    @TableField(exist = false)
+ 
     private static final long serialVersionUID = 1L;
 
     @Override
