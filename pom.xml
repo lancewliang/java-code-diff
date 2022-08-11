@@ -134,17 +134,5 @@
         </dependencies>
     </dependencyManagement>
 
-    <!-- 组件上传配置 -->
-    <distributionManagement>
-		<snapshotRepository>
-		<id>snapshot</id>
-		<name>maven-snapshots</name>
-		<url>http://nexus.ecosaas.com:8081/repository/snapshots/</url>
-		</snapshotRepository>
-		<repository>
-		<id>release</id>
-		<name>maven-releases</name>
-		<url>http://nexus.ecosaas.com:8081/repository/releases/</url>
-		</repository>
-    </distributionManagement>
+   
 </project>
