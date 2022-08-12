@@ -14,8 +14,8 @@ import javax.validation.constraints.NotNull;
 @Data
 public class ProjectDiffParams extends BaseParams{
 
-    @NotNull(message="项目id不能为空")
-    private Integer id;
+    //@NotNull(message="项目id不能为空")
+    //private Integer id;
 
     private String oldVersion;
 
